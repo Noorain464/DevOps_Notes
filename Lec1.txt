@@ -1,0 +1,96 @@
+
+Microservices = breaking a big monolithic app into small, independent services.
+Each service = single business function (Auth, Payments, Orders, etc.) and communicates via APIs.
+
+Core Components
+
+API Gateway:
+Entry point for all services → handles routing, auth, rate limiting, caching, etc.
+(Examples: AWS API Gateway, Kong, Nginx)
+
+Service Registry / Discovery:
+Keeps track of service instances for dynamic discovery (Consul, Eureka).
+
+DNS & Load Balancer:
+DNS maps domain → IP.
+Load balancer distributes traffic for high availability (L4: TCP, L7: HTTP/HTTPS).
+
+Database per Service:
+Each service has its own DB (SQL → structured; NoSQL → flexible + scalable).
+Use both if needed = polyglot persistence.
+
+Communication:
+
+Synchronous: Request-response (REST/gRPC) → real-time but tightly coupled.
+
+Asynchronous: Event/message-based (Kafka, RabbitMQ) → decoupled, scalable.
+
+Message Broker:
+Manages async comms, queues, pub/sub (Kafka, RabbitMQ, AWS SQS).
+
+Swagger/OpenAPI:
+For documenting APIs (endpoints, requests, responses).
+
+Event Bus:
+Services publish/subscribe to events → supports eventual consistency.
+
+Config & Logs:
+Externalized config (Spring Cloud Config) + centralized logs (ELK, CloudWatch).
+
+Monitoring/Tracing:
+Prometheus, Grafana, Jaeger → health, metrics, and error tracking.
+
+Reporting/Analytics:
+Collects data from all services (Redshift, Snowflake, ELK).
+
+DNS 
+
+Client → Root Server → TLD (.com) → Server → IP returned → Browser connects.
+Cloud tools: AWS Route 53, Cloudflare.
+
+Load Balancer
+
+Ensures availability, fault tolerance, scalability.
+
+L4: Works on TCP/UDP (NLB, HAProxy).
+
+L7: Works on HTTP (ALB, Nginx, Traefik).
+Supports health checks, SSL termination, sticky sessions.
+
+SQL vs NoSQL
+    	SQL	NoSQL
+Schema	Fixed	Dynamic
+Scaling	Vertical	Horizontal
+Example	MySQL, Postgres	MongoDB, Cassandra
+Best For	Transactions	High scalability
+Externalizing Logs
+
+Containers lose logs → use centralized systems.
+Fluentd → Elasticsearch → Kibana/Grafana.
+Gives unified view + easy debugging.
+
+12-Factor App Principles (For Cloud-Ready Microservices)
+
+1. One codebase, many deploys
+
+2. Declare dependencies
+
+3. Config via env vars
+
+4. Treat DB/queues as resources
+
+5. Separate build → release → run
+
+6. Stateless processes
+
+7. Port binding
+
+8. Scale via processes
+
+9. Fast start/stop
+
+10. Dev = Prod parity
+
+11. Logs as event streams
+
+12. Run admin tasks separately
