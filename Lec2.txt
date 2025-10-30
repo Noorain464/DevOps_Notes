@@ -1,0 +1,130 @@
+Introduction to DevOps
+DevOps = Combination of Development (Dev) and Operations (Ops).
+It’s an innovative tech approach for delivering software faster and more reliably.
+Ensures Zero Downtime Upgrade (ZDU) — deploying updates without stopping the system.
+
+Traditional Software Lifecycle (Waterfall)
+
+- Requirement Analysis
+
+- Design Phase
+
+-- HLD (High-Level Design) – 60%
+
+-- LLD (Low-Level Design)
+
+- Coding Phase – 40%
+
+- Includes Unit Testing
+
+- Deployment
+
+Artifacts produced:
+→ .zip, .exe, libraries (.jar, .war)
+
+Build tools:
+→ package.json, pom.xml, Dockerfile
+
+DevOps Phases
+
+- Plan
+
+- Code
+
+- Build
+
+- Test
+
+- Release
+
+- Deploy
+
+- Operate
+
+- Monitor
+
+Continuous feedback and automation are key across all stages.
+
+Shift Left Approach
+
+- Detect bugs early in the lifecycle (during requirements or design) instead of after release.
+- Cost increases when bugs are found later.
+- Encourages early performance, testing, and security testing.
+
+Earlier Approach Tools:
+
+Performance: JMeter
+
+Security: SonarQube, BugSnills (bug analysis tools)
+
+Security Testing Types
+
+SCA (Software Composition Analysis): Checks open-source dependencies.
+
+SAST (Static Application Security Testing): Static code analysis for vulnerabilities.
+
+DAST (Dynamic Application Security Testing): Tests running applications for security issues.
+
+Example:
+
+In Java, using normal Statement can make code vulnerable to SQL injection.
+Use PreparedStatement to prevent such attacks.
+
+AWS (Cloud & Infrastructure Basics)
+
+Virtual Machines in AWS = EC2 Instances
+
+Run inside a VPC (Virtual Private Cloud) with customizable subnets.
+
+IGW – Internet Gateway (connects VPC to the internet).
+
+Layered Security: Security at multiple levels (network, app, etc.)
+
+Architecture Example:
+
+DNS → Load Balancer (Public Subnet) → Auth Service → MS/MI Service
+ → Message Broker (Kafka - async)
+ → API/Auth
+
+
+Communication: Can be Synchronous or Asynchronous.
+
+CI/CD (Continuous Integration / Continuous Delivery / Deployment)
+
+Continuous Integration (CI):
+
+Tools: GitHub, Nexus / JFrog Artifactory
+
+Steps:
+
+- Download code
+
+- Install dependencies
+
+- Lint → Build code → Unit Test
+
+- Run SAST/SCA (DevSecOps integration)
+
+- Build Docker Image → Validation
+
+Continuous Delivery (CD):
+
+Automatic delivery of tested builds to staging or pre-production.
+
+Continuous Deployment:
+
+Automatic deployment directly to production.
+
+Strategies: Blue-Green Deployment, Canary Release
+
+Additional Notes
+
+High Cyclomatic Complexity: Indicates complex code → measure via SonarQube.
+
+Defect Categories:
+
+Critical Issues
+
+Blockers
+
+Code Smells
