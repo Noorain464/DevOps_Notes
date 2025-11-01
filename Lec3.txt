@@ -1,0 +1,84 @@
+Continuous Delivery (CD)
+Definition
+
+CD starts where CI (Continuous Integration) ends.
+
+The goal is to automate deployment of tested artifacts to various environments, ensuring faster, reliable releases.
+
+Flow of Environments
+SIT  →  UAT  →  Pre-Prod  →  Production
+
+
+SIT (System Integration Testing): Checks whether all integrated modules work together.
+
+UAT (User Acceptance Testing): Final testing done by end-users before production.
+
+Pre-Prod: Final staging environment mirroring production.
+
+Prod: Actual live system.
+
+Testing in CD
+Type	Purpose	Example
+Functional Testing	Verifies business logic	Testing login, signup, etc.
+Performance Testing	Ensures system can handle load	Using JMeter
+Security Testing (DAST)	Dynamic checks on running app	OWASP ZAP, Burp Suite
+Continuous Deployment
+
+Extends CD — after successful validation, deployment is automatic to production (no manual approval).
+
+Ensures Zero Downtime Deployment (ZDD) or Blue-Green Deployment.
+
+Testing & Quality Metrics
+
+Code Coverage: ~80% recommended
+
+Types: Line Coverage, Function Coverage, Branch Coverage
+
+Mocking: Used for unit test isolation
+
+Cyclomatic Complexity: Measures code complexity (analyzed by SonarQube)
+
+Defect Categories: Critical, Blockers, Code Smells
+
+Linux Basics
+
+Created by Linus Torvalds (1991)
+
+Open-source, used in ~90% of production environments
+
+200+ distributions (Ubuntu, Red Hat, CentOS, etc.)
+
+Kernel
+
+Core of the OS – interface between hardware and software
+
+Manages CPU, memory, and hardware resources
+
+Microkernel Architecture: minimal kernel handling essential tasks; drivers handled separately.
+
+AWS – EC2 & Networking
+EC2 (Elastic Compute Cloud)
+
+Creates virtual machines in AWS.
+
+AMIs (Amazon Machine Images): pre-configured templates (OS + software).
+
+Users can also create custom AMIs.
+
+VPC (Virtual Private Cloud)
+
+Private virtual network within AWS.
+
+Contains subnets (Public/Private).
+
+Connected to the internet via IGW (Internet Gateway).
+
+Ensures layered security at multiple levels.
+
+IP Types
+Type	Description
+Public IP	Internet-accessible, changes when instance restarts
+Private IP	Internal AWS communication
+Elastic IP	Static, persistent public IP
+
+EC2 Demo Steps
