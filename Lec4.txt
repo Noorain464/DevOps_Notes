@@ -1,0 +1,20 @@
+Linux commands and shell scripting basics were covered.
+
+Various Linux commands were demonstrated, including:
+
+PWD, CD, MKDIR, RMDIR, RM-RF
+File permissions (chmod)
+Find and locate commands
+PS (process status) command
+Introduction to shell scripting:
+Creating and executing simple shell scripts
+Using variables and command-line arguments
+String manipulation in bash
+A script to create a user and add them to a group was demonstrated.
+
+Best practices for shell scripting in a professional setting were discussed, including:
+
+Adding comments and documentation
+Error handling and input validation
+Following naming conventions 
+Industry accepted code example.
