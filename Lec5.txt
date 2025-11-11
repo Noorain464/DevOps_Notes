@@ -1,0 +1,27 @@
+docker run: Creates and starts a new container from an image. Example: docker run -it ubuntu bash
+
+docker ps: Lists running containers. docker ps -a: Lists all containers (including stopped ones).
+
+docker stop: Stops a running container. Example: docker stop <container\_id>
+
+docker kill: Forcefully stops a container.
+
+docker container prune: Removes all stopped containers.
+
+docker images: Lists all Docker images on the system.
+
+docker rmi: Removes a Docker image. Example: docker rmi <image\_id>
+
+docker pull: Downloads an image from Docker Hub. Example: docker pull nginx
+
+docker commit: Creates a new image from a container's changes. Example: docker commit -m "message" <container\_id> <new\_image\_name>
+
+docker push: Uploads an image to Docker Hub. Example: docker push <username>/<image\_name>
+
+docker login: Logs into Docker Hub.
+
+docker inspect: Displays detailed information about a Docker object (container, image, etc.). Example: docker inspect <container\_id>
+
+docker exec: Runs a command in a running container. Example: docker exec -it <container\_id> bash
+
+docker info: Displays system-wide information about Docker.
