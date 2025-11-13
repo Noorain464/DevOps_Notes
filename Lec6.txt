@@ -1,0 +1,63 @@
+Docker Image
+
+A Docker Image is the blueprint of a container — it contains everything needed to run an application (code, libraries, dependencies, etc.).
+
+Images are immutable and portable, ensuring consistent environments across systems.
+
+Base Image
+
+The foundation layer for your image (e.g., ubuntu, python).
+
+Custom images are built on top of base images.
+
+Dockerfile
+
+A Dockerfile is a script that contains instructions to build a Docker image.
+
+Each instruction in the Dockerfile creates a new layer in the image.
+
+Common instructions:
+
+FROM → Defines the base image.
+
+RUN → Executes commands inside the image (e.g., RUN echo "Hello World").
+
+COPY / ADD → Copy files or directories into the image.
+
+CMD → Specifies the default command to run when the container starts.
+
+ENTRYPOINT → Defines a command that will always run, even if parameters are passed.
+
+Building and Running Docker Images
+
+Build an image:
+
+docker build -t <image_name> .
+
+
+-t → tag (assigns a name to your image)
+
+. → current directory (location of Dockerfile)
+
+Run a container:
+
+docker run <image_name>
+
+
+Example:
+
+docker build -t myapp .
+docker run myapp
+
+Key Concepts
+
+Container: A running instance of a Docker image.
+
+Portability: Docker images can run anywhere, making them platform-independent.
+
+Layers: Each Dockerfile instruction adds a new layer, making images more efficient (shared layers are cached).
+
+CMD vs ENTRYPOINT
+Command	Purpose	Behavior
+CMD	- Provides default command/arguments. Can be overridden when running the container
+ENTRYPOINT - Defines the executable that always runs. Cannot be overridden by command-line arguments (unless specified)
