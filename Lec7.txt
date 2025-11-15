@@ -1,0 +1,35 @@
+Docker containers run from an Ubuntu base and are executed like processes but remain isolated from the host.
+
+Containers differ from VMs because, instead of virtualizing hardware, they share the host OS kernel and isolate:
+
+IP addresses
+
+Ports & sockets
+
+Network stack
+
+Process space
+
+File system space
+
+Hostname space
+
+User space
+
+A Docker container runs within the host machine and exposes ports (e.g., container port 80 → host port 8080).
+
+Containers are ephemeral—they can be created, destroyed, and recreated easily, which is why data inside them can disappear unless volumes are used.
+
+VMs are hypervisor-based, whereas containers rely on OS-level virtualization and are much lighter.
+
+Networking involves concepts like Ethernet cables, IPs, switches, gateways, and subnetting.
+
+docker run ubuntu
+docker run -it ubuntu bash      # Run with interactive shell
+docker run -d nginx             # Run in background
+
+
+docker stop <container_id>
+docker start <container_id>
+docker rm <container_id>
+docker rmi <image_id>
